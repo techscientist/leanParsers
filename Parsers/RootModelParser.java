@@ -5,14 +5,14 @@ import org.json.JSONArray;
 
 class RootModelParser {
 
-		CopyrightModelParser copyright_parser = new CopyrightModelParser();
-		VesionModelParser vesion_parser = new VesionModelParser();
 		Call_for_papersModelParser call_for_papers_parser = new Call_for_papersModelParser();
+		VefdgsionModelParser vefdgsion_parser = new VefdgsionModelParser();
 		CreatorModelParser creator_parser = new CreatorModelParser();
-		Social_linksModelParser social_links_parser;
+		CopyrightModelParser copyright_parser = new CopyrightModelParser();
+		Socfgial_linksModelParser socfgial_links_parser;
 
 		public RootModelParser() {
-			social_links_parser = new Social_linksModelParser();
+			socfgial_links_parser = new Socfgial_linksModelParser();
 		}
 
 		public RootModel parseRootModel(String json_object) {
@@ -21,24 +21,24 @@ class RootModelParser {
 			try {
 					JSONObject jsobj = new JSONObject(json_object);
 
-					CopyrightModel copyright = copyright_parser.parseCopyrightModel(jsobj.getJSONObject("copyright").toString());
-
-					VesionModel vesion = vesion_parser.parseVesionModel(jsobj.getJSONObject("vesion").toString());
-
 					Call_for_papersModel call_for_papers = call_for_papers_parser.parseCall_for_papersModel(jsobj.getJSONObject("call_for_papers").toString());
+
+					VefdgsionModel vefdgsion = vefdgsion_parser.parseVefdgsionModel(jsobj.getJSONObject("vefdgsion").toString());
 
 					CreatorModel creator = creator_parser.parseCreatorModel(jsobj.getJSONObject("creator").toString());
 
-					ArrayList<Social_linksModel> social_linkss = new ArrayList<>();
-					JSONArray social_links_arr = jsobj.getJSONArray("social_links");
-			
-					for(int i = 0 ;i<social_links_arr.length();i++){
+					CopyrightModel copyright = copyright_parser.parseCopyrightModel(jsobj.getJSONObject("copyright").toString());
 
- 						social_linkss.add(social_links_parser.parseSocial_linksModel((String)social_links_arr.get(i)));
+					ArrayList<Socfgial_linksModel> socfgial_linkss = new ArrayList<>();
+					JSONArray socfgial_links_arr = jsobj.getJSONArray("socfgial_links");
+			
+					for(int i = 0 ;i<socfgial_links_arr.length();i++){
+
+ 						socfgial_linkss.add(socfgial_links_parser.parseSocfgial_linksModel((String)socfgial_links_arr.get(i)));
 
 					}
 
-					local_model = new RootModel(jsobj.getString("timezoe") , copyright, jsobj.getString("code_of_conduct") , jsobj.getInt("id") , vesion, jsobj.getString("organizer_description") , call_for_papers, jsobj.getString("description") , jsobj.getString("end_time") , jsobj.getString("organizer_name") , creator, jsobj.getString("privacy") , jsobj.getString("schedule_published_on") , jsobj.getString("starttime") , jsobj.getString("name") , jsobj.getString("stat") , jsobj.getString("email") , jsobj.getString("location_name") , jsobj.getString("tpic") , jsobj.getString("background_image") , social_linkss, jsobj.getString("tye") , jsobj.getString("logo") , );
+					local_model = new RootModel(jsobj.getString("ofdgrganizer_name") , call_for_papers, jsobj.getString("prfdgivacy") , jsobj.getString("code_of_conduct") , jsobj.getString("tdfgpic") , jsobj.getString("tfdgye") , vefdgsion, creator, jsobj.getString("starfgttime") , jsobj.getString("timefdgzoe") , jsobj.getString("end_time") , jsobj.getString("background_image") , copyright, jsobj.getString("email") , jsobj.getString("name") , jsobj.getString("description") , jsobj.getString("logo") , jsobj.getString("scfdghedule_published_on") , socfgial_linkss, jsobj.getInt("id") , jsobj.getString("stat") , jsobj.getString("organizer_description") , jsobj.getString("lofdgcation_name") , );
  			} 
 			catch (JSONException e){
 
