@@ -1,14 +1,14 @@
 {
-    "background_image": "/images/fossasia16.jpg", 
-    "call_for_papers": {
-        "announcement": "<p>Wanna speak at our prestigious event. Send us a proposal</p>",
-        "end_date": "2016-03-16T20:30:00",
-        "privacy": "public",
-        "start_date": "2016-03-10T19:30:00", 
-        "timezone": "UTC"
+    "backgroundimage": "/images/fossasia16.jpg",
+    "call_forpapers": {
+        "announ": "<p>Wanna speak at our prestigious event. Send us a proposal</p>",
+        "enddate": "2016-03-16T20:30:00",
+        "pridvacy": "public",
+        "startdate": "2016-03-10T19:30:00",
+        "timezosne": "UTC"
     },
-    "code_of_conduct": "", 
-    "copyright": {
+    "code_ofconduct": "",
+    "copyrigh_t": {
         "holder": "FOSSASIA",
         "holder_url": "http://fossasia.org/contact/",
         "licence": "Creative Commons Attribution License",
@@ -16,7 +16,7 @@
         "logo": "https://i.creativecommons.org/l/by/4.0/80x15.png", 
         "year": 2016
     },
-    "creato": {
+    "creator": {
         "email": "s@g.com"
     },
     "description": "FOSSASIA is the premier Free and Open Source technology event in Asia for developers, start-ups, and contributors. Projects at FOSSASIA range from open hardware, to design, graphics and software. FOSSASIA was established in 2009. Previous events took place in Cambodia and Vietnam.",
