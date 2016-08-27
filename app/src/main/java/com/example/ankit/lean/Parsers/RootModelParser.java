@@ -38,7 +38,7 @@ class RootModelParser {
 
 					CopyrightModel copyright = copyright_parser.parseCopyrightModel(jsobj.getJSONObject("copyright").toString());
 
-					local_model = new RootModel(jsobj.getString("organizer_name") , jsobj.getString("location_name") , social_linkss, jsobj.getString("logo") , jsobj.getString("timezone") , jsobj.getString("description") , jsobj.getString("email") , jsobj.getInt("id") , creator, jsobj.getString("end_time") , version, call_for_papers, jsobj.getString("code_of_conduct") , jsobj.getString("schedule_published_on") , jsobj.getString("start_time") , jsobj.getString("state") , jsobj.getString("type") , jsobj.getString("privacy") , jsobj.getString("topic") , jsobj.getString("background_image") , jsobj.getString("name") , copyright, jsobj.getString("organizer_description") , );
+					local_model = new RootModel(social_linkss, jsobj.getString("location_name") , jsobj.getString("background_image") , jsobj.getString("start_time") , jsobj.getString("privacy") , creator, jsobj.getString("email") , jsobj.getString("end_time") , jsobj.getString("description") , jsobj.getString("organizer_name") , jsobj.getString("logo") , version, jsobj.getString("topic") , jsobj.getString("organizer_description") , jsobj.getString("code_of_conduct") , call_for_papers, jsobj.getString("type") , jsobj.getString("schedule_published_on") , jsobj.getString("timezone") , copyright, jsobj.getString("name") , jsobj.getInt("id") , jsobj.getString("state") , );
  			} 
 			catch (JSONException e){
 
