@@ -1,1 +1,1 @@
-slight change in model classes
+new classes addition for bug fixations
