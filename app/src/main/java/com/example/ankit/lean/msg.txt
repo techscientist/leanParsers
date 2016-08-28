@@ -1,1 +1,1 @@
-submition after meeting 204 for bug #0037
+slight change in model classes
